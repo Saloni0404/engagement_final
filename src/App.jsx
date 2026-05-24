@@ -108,7 +108,7 @@ const toggleMusic = () => {
     <div className="invite-layout">
       <div className="invite-copy fade-up">
         <p className="eyebrow">  
-          <span>We would like to invite you to</span>
+          We would like to invite you to
           <span>engagement ceremony of</span>
         </p>
         <div className="divider-page2">
