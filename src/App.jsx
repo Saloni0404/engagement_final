@@ -46,7 +46,6 @@ useEffect(() => {
 const toggleMusic = () => {
 
   if (!audioRef.current) return;
-
   if (playing) {
     audioRef.current.pause();
   } else {
@@ -56,9 +55,7 @@ const toggleMusic = () => {
   setPlaying(!playing);
 };
   const handleSubmit = async (e) => {
-
     e.preventDefault();
-  
     try {
       const response = await fetch(
         'https://script.google.com/macros/s/AKfycbz4V3mzxBi2LPVgUpBRO-KBhoBv9bG1RtM4K6BWceehc0DKOsddL_vvYojwqxNw07HkhA/exec',
@@ -111,10 +108,15 @@ const toggleMusic = () => {
     <div className="invite-layout">
       <div className="invite-copy fade-up">
         <p className="eyebrow">  
-            <span>We would like to invite you to the engagement</span>
-            <span> ceremony of</span>
-            </p>
-        <div className="divider-page2"><span></span>♥<span></span></div>
+          <span>We would like to invite you to</span>
+          <span>engagement ceremony of</span>
+        </p>
+        <div className="divider-page2">
+          <span></span>
+          ♥
+          <span></span>
+        </div>
+
         <h2>{invite.names}</h2>
         <div className="couple-section"></div>
        <div className="couple-grid">
@@ -130,7 +132,7 @@ const toggleMusic = () => {
          <div className="couple-ampersand">
           &
         </div>
-      <div className="person-block">
+        <div className="person-block">
         <h2 className="couple-name">Shrenik</h2>
         <p className="family-label">
           (Son of)
