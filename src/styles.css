@@ -55,9 +55,12 @@ html{
   padding-bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  text-align: center;
+  text-align: left;
+  width: 100%;
+  max-width: 720px;
+  margin-left: 0;
 }
 .eyebrow{ font-family:'Great Vibes',cursive;
   font-size:clamp(2.1rem,4.5vw,3.8rem);
@@ -83,8 +86,9 @@ html{
     align-items:center;
     gap:18px}
 .closing-title{font-family:'Great Vibes',cursive;
-    font-size:clamp(2.6rem,6vw,5rem);
-    margin:0}
+  font-size:clamp(2.1rem,4.5vw,3.8rem);
+  margin:8px 0 0
+}
 .stack-card{width:min(820px,100%);
     background:rgba(255,255,255,.52);
     border:1px solid rgba(201,154,55,.35);
