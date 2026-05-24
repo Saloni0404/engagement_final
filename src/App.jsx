@@ -111,10 +111,10 @@ const toggleMusic = () => {
     <div className="invite-layout">
       <div className="invite-copy fade-up">
         <p className="eyebrow">  
-            <span>We would like to invite you to the</span>
-            <span>engagement ceremony of</span>
+            <span>We would like to invite you to the engagement</span>
+            <span> ceremony of</span>
             </p>
-        <div className="divider divider-page2"><span></span>♥<span></span></div>
+        <div className="divider-page2"><span></span>♥<span></span></div>
         <h2>{invite.names}</h2>
         <div className="couple-section"></div>
        <div className="couple-grid">
@@ -126,6 +126,9 @@ const toggleMusic = () => {
         <p className="family-name">
           Jayshree & Rajendra Burad
         </p>
+        </div>
+         <div className="couple-ampersand">
+          &
         </div>
       <div className="person-block">
         <h2 className="couple-name">Shrenik</h2>
