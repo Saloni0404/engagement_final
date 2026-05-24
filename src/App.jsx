@@ -130,7 +130,7 @@ const toggleMusic = () => {
           alt="Illustration of Saloni and Shrenik"
         />
       </div>
-    </div>*/}
+    </div> */}
   </Page>
   <Page n={3}>
     <div className="page3-inner fade-up">
