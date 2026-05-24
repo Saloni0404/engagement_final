@@ -1,10 +1,8 @@
-
 import { createRoot } from 'react-dom/client';
 import { CalendarDays, Clock, MapPin, Phone, Mail } from 'lucide-react';
 import { invite } from './inviteConfig';
 import './styles.css';
 import React, { useState, useRef } from 'react';
-
 
 function Detail({icon, label, href}){
   return <a className="detail glow-link" href={href} target={href?.startsWith('http')?'_blank':undefined} rel="noreferrer">
@@ -82,8 +80,10 @@ const toggleMusic = () => {
  return <main>
   <Page n={1}>
     <div className="hero-card fade-up">
-    { /* <img src={invite.images.logo} className="logo static-logo" alt="Saloni and Shrenik logo" />*/}
-      <h1>{invite.title}</h1>
+      <h1 className="hero-title">
+        Saloni & Shrenik's
+        <span>Engagement Ceremony</span>
+      </h1>
       <div className="divider"><span></span>♥<span></span></div>
       <p className="subtitle">{invite.subtitle}</p>
       <div className="scroll-note">Scroll to open</div>
