@@ -307,10 +307,7 @@ h2{
 }
 
 .person-block{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
+
   flex:1;
   max-width:150px;
 }
