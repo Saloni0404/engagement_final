@@ -43,14 +43,14 @@ html{
   gap: 18px;
 }
 .couple-wrap{
-  order: 1;
+  order: 2;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin-top: 8px;
 }
 .invite-copy{  
-  order: 2;
+  order: 1;
   margin-top: auto;
   padding-bottom: 12px;
 }
