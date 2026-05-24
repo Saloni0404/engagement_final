@@ -93,68 +93,163 @@ const toggleMusic = () => {
   };
 
  return <main>
-  <Page n={1}>
-    <div className="hero-card fade-up">
-      <h1 className="hero-title">
-        Saloni & Shrenik's
-        <span>Engagement Ceremony</span>
-      </h1>
-      <div className="divider"><span></span>♥<span></span></div>
-      <p className="subtitle">{invite.subtitle}</p>
-      <div className="scroll-note">Scroll to open</div>
+<Page n={1}>
+  <div className="hero-card fade-up">
+
+    {/* PAGE 1 LOGO */}
+    {/* 
+    <img
+      src={invite.images.logo}
+      className="logo static-logo"
+      alt="Logo"
+    />
+    */}
+
+    {/* PAGE 1 TITLE */}
+    <h1 className="hero-title">
+      Saloni & Shrenik's
+      <span>Engagement Ceremony</span>
+    </h1>
+
+    {/* PAGE 1 DIVIDER */}
+    <div className="divider">
+      <span></span>♥<span></span>
     </div>
-  </Page>
-  <Page n={2}>
-    <div className="invite-layout">
-      <p className="eyebrow fade-up">  
-        <span>We would like to invite you to</span>
-        <span>engagement ceremony of</span>
-      </p>
-      <div className="divider-page2">
-        <span></span>♥<span></span>
-      </div>
-  <div className="invite-copy fade-up">
-        <h2>{invite.names}</h2>
-        <div className="couple-section"></div>
-       <div className="couple-grid">
+
+    {/* PAGE 1 SUBTITLE */}
+    <p className="subtitle">
+      {invite.subtitle}
+    </p>
+
+    {/* KEEP SCROLL BUTTON */}
+    <div className="scroll-note">
+      Scroll to open
+    </div>
+
+  </div>
+</Page>
+
+<Page n={2}>
+
+  <div className="invite-layout">
+
+    {/* =========================================
+       COMMENTED PAGE 2 HEADER SECTION
+    ========================================== */}
+
+    {/*
+    <p className="eyebrow fade-up">  
+      <span>
+        We would like to invite you to
+      </span>
+
+      <span>
+        engagement ceremony of
+      </span>
+    </p>
+
+    <div className="divider-page2">
+      <span></span>♥<span></span>
+    </div>
+    */}
+
+    {/* =========================================
+       COMMENTED PAGE 2 COUPLE SECTION
+    ========================================== */}
+
+    {/*
+    <div className="invite-copy fade-up">
+
+      <h2>{invite.names}</h2>
+
+      <div className="couple-grid">
+
         <div className="person-block">
-        <h2 className="couple-name">Saloni</h2>
-        <p className="family-label">
-          (Daughter of)
-         </p>
-        <p className="family-name">
-          Jayshree & Rajendra Burad
-        </p>
+
+          <h2 className="couple-name">
+            Saloni
+          </h2>
+
+          <p className="family-label">
+            (Daughter of)
+          </p>
+
+          <p className="family-name">
+            Jayshree & Rajendra Burad
+          </p>
+
         </div>
-         <div className="couple-ampersand">
+
+        <div className="couple-ampersand">
           &
         </div>
+
         <div className="person-block">
-        <h2 className="couple-name">Shrenik</h2>
-        <p className="family-label">
-          (Son of)
-        </p>
-        <p className="family-name">
-          Shailaja & Sanjay Changede
-        </p>
-      </div>
-    </div>
-        <div className="details-row">
-          <Detail icon={<CalendarDays/>} label={invite.dateLabel} href={invite.calendarLink}/>
-          <Detail icon={<Clock/>} label={invite.timeLabel} href={invite.calendarLink}/>
-          <Detail icon={<MapPin/>} label={invite.locationShort} href={invite.mapLink}/>
+
+          <h2 className="couple-name">
+            Shrenik
+          </h2>
+
+          <p className="family-label">
+            (Son of)
+          </p>
+
+          <p className="family-name">
+            Shailaja & Sanjay Changede
+          </p>
+
         </div>
-     
+
       </div>
-      {/*<div className="couple-wrap">
-        <img
-          src={invite.images.couple}
-          className="couple"
-          alt="Illustration of Saloni and Shrenik"
-        />
-      </div>*/}
+
     </div>
-  </Page>
+    */}
+
+    {/* =========================================
+       KEEP ONLY DETAILS ROW
+    ========================================== */}
+
+    <div className="details-row">
+
+      <Detail
+        icon={<CalendarDays/>}
+        label={invite.dateLabel}
+        href={invite.calendarLink}
+      />
+
+      <Detail
+        icon={<Clock/>}
+        label={invite.timeLabel}
+        href={invite.calendarLink}
+      />
+
+      <Detail
+        icon={<MapPin/>}
+        label={invite.locationShort}
+        href={invite.mapLink}
+      />
+
+    </div>
+
+    {/* =========================================
+       COMMENTED COUPLE IMAGE
+    ========================================== */}
+
+    {/*
+    <div className="couple-wrap">
+
+      <img
+        src={invite.images.couple}
+        className="couple"
+        alt="Illustration of couple"
+      />
+
+    </div>
+    */}
+
+  </div>
+
+</Page>
   <Page n={3}>
     <div className="page3-inner fade-up">
       <h2 className="closing-title">{invite.message}</h2>
