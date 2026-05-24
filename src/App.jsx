@@ -98,10 +98,8 @@ const toggleMusic = () => {
             </p>
         <div className="divider"><span></span>♥<span></span></div>
         <h2>{invite.names}</h2>
-
-        <div className="couple-section">
-
-      <div className="couple-grid">
+        <div className="couple-section"></div>
+       <div className="couple-grid">
         <div className="person-block">
         <h2 className="couple-name">Saloni</h2>
         <p className="family-label">
