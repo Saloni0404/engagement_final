@@ -121,7 +121,8 @@ const toggleMusic = () => {
           <Detail icon={<Clock/>} label={invite.timeLabel} href={invite.calendarLink}/>
           <Detail icon={<MapPin/>} label={invite.locationShort} href={invite.mapLink}/>
         </div>
-      
+      </div>
+</div>
       {/*</div>
       <div className="couple-wrap">
         <img
