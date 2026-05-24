@@ -22,6 +22,6 @@ export const invite = {
     logo: '/logo.png',
     couple: '/couple.png',
     map: '/map.png',
-    backgrounds: ['/page1-new.png','/page2-new.png','/page1-new.png']
+    backgrounds: ['/page1-new2.png','/page2-new.png','/page1-new.png']
   }
 };
