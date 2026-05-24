@@ -28,7 +28,7 @@ function App(){
   
     try {
       const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbwHKOoEWzcCswCFOoLlEZIb1opXC3wlMLeAwljqbySggVZEGfYF5fzneGHWWh_6FiJy2g/exec',
+        'https://script.google.com/macros/s/AKfycbycbkCflZLQwP7bWOPCzXNUUEin05qh9FKV4rmd6kyDQGkgDp4WeuPqRMUb0PAvaBa-iA/exec',
         {
           method: 'POST',
           mode: 'no-cors',
@@ -65,7 +65,7 @@ function App(){
  return <main>
   <Page n={1}>
     <div className="hero-card fade-up">
-      <img src={invite.images.logo} className="logo static-logo" alt="Saloni and Shrenik logo" />
+    { /* <img src={invite.images.logo} className="logo static-logo" alt="Saloni and Shrenik logo" />*/}
       <h1>{invite.title}</h1>
       <div className="divider"><span></span>♥<span></span></div>
       <p className="subtitle">{invite.subtitle}</p>
