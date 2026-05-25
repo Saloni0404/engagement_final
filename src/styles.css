@@ -83,7 +83,7 @@ div{
   align-items:center;
   justify-content:center;
   padding:0;
-  overflow:hidden;
+  overflow:visible;
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
@@ -93,7 +93,7 @@ div{
 }
 .page-frame{
   position:absolute;
-  inset:12px;
+  inset:10px 8px;
   border:
     2px solid rgba(201,154,55,.55);
   border-radius:
