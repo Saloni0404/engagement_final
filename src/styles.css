@@ -194,14 +194,14 @@ h2{
 
 .scroll-note{
   position:fixed;
-  bottom:4svh;
+  bottom:7svh;
   left:50%;
   color:var(--maroon);
-  font-family:'Cormorant Garamond',serif;
+  font-family:'Cormorant Garamond',serif, bold;
   font-size:clamp(1.4rem,2vw,2.2rem);
   line-height:1.4;
   font-weight:600;
-  opacity:.95;
+  opacity:1.0;
   z-index:999;
   width:max-content;
   transform:translateX(-50%);
