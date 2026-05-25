@@ -293,6 +293,22 @@ const toggleMusic = () => {
       />
 
     </div>
+    <section className="page2-contacts">
+      <a
+        href="tel:YOURNUMBER"
+        className="page2-contact"
+      >
+        <Phone className="mini-phone"/>
+        <span>Saloni - YOUR NUMBER</span>
+      </a>
+      <a
+        href="tel:YOURNUMBER"
+        className="page2-contact"
+      >
+        <Phone className="mini-phone"/>
+        <span>Shrenik - YOUR NUMBER</span>
+      </a>
+    </section>
 
     {/* =========================================
        COMMENTED COUPLE IMAGE
@@ -399,6 +415,7 @@ const toggleMusic = () => {
         </a>
       </section>
       */}
+     {/*
       <section className="stack-card contacts">
         <Phone className="section-icon"/>
         <h3>Contact</h3>
@@ -413,6 +430,7 @@ const toggleMusic = () => {
           </a>
         )}
       </section>
+      */}
       <p className="final-giftline">{invite.giftLine}</p>
       <p className="final-line">{invite.closing}</p>
       

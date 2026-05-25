@@ -398,7 +398,34 @@ h2{
   display:block;
   margin:0 auto;
 }
+.page2-contacts{
+  position:absolute;
 
+  left:5%;
+  bottom:6%;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:6px;
+
+  z-index:5;
+}
+
+.page2-contact{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  text-decoration:none;
+  color:#6D071A;
+  font-size:0.72rem;
+  font-weight:600;
+}
+.mini-phone{
+  width:18px;
+  height:18px;
+  color:var(--gold);
+}
 /* ======================================================
    PAGE 3
 ====================================================== */
