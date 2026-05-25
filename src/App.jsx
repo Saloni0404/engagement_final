@@ -19,7 +19,6 @@ function Page({ n, children }) {
           `url(${invite.images.backgrounds[n - 1]})`
       }}
     >
-      <div className="page-frame"></div>
       {children}
     </section>
   );

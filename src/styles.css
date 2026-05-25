@@ -95,16 +95,7 @@ div{
   box-shadow:none;
   box-sizing:border-box;
 }
-.page-frame{
-  position:absolute;
-  inset:10px 8px;
-  border:
-    2px solid rgba(201,154,55,.55);
-  border-radius:
-    clamp(12px,2vw,22px);
-  pointer-events:none;
-  z-index:3;
-}
+
 .page2{
   background-size:cover;
   background-position:center center;
