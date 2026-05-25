@@ -1,7 +1,7 @@
 export const invite = {
   
-  title: "Saloni & Shrenik’s Engagement Ceremony",
-  subtitle: 'A beautiful beginning of our forever',
+  /*title: "Saloni & Shrenik’s Engagement Ceremony",*/
+  /*subtitle: 'A beautiful beginning of our forever',*/
   /*intro: 'We would like to invite you to the engagement ceremony of',*/
   dateLabel: 'Saturday, June 13, 2026',
   timeLabel: '6:30 PM onwards',
