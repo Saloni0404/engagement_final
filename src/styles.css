@@ -213,8 +213,8 @@ h2{
 .scroll-note{
 
   position:absolute;
-  top:80%;
-  left:30%;
+  top:90%;
+  left:40%;
   transform:translateX(-50%);
   color:var(--maroon);
   font-family:'Cormorant Garamond',serif;
