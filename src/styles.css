@@ -525,7 +525,7 @@ h2{
 ====================================================== */
 .rsvp-card{
   min-height:min(760px,90dvh);
-  padding-top:34px;
+  padding-top:25px;
   padding-bottom:34px;
 }
 .rsvp-form{

@@ -295,18 +295,18 @@ const toggleMusic = () => {
     </div>
     <section className="page2-contacts">
       <a
-        href="tel:YOURNUMBER"
+        href="tel:412-805-0867"
         className="page2-contact"
       >
         <Phone className="mini-phone"/>
-        <span>Saloni - YOUR NUMBER</span>
+        <span>Saloni - 412-805-0867 </span>
       </a>
       <a
-        href="tel:YOURNUMBER"
+        href="tel:470-398-7738"
         className="page2-contact"
       >
         <Phone className="mini-phone"/>
-        <span>Shrenik - YOUR NUMBER</span>
+        <span>Shrenik - 470-398-7738 </span>
       </a>
     </section>
 
@@ -332,7 +332,9 @@ const toggleMusic = () => {
   <Page n={3}>
     <div className="page3-inner fade-up">
       <h2 className="closing-title">{invite.message}</h2>
+     {/*
       <div className="divider"><span></span>♥<span></span></div>
+     */}
       <section className="stack-card rsvp-card">
         <Mail className="section-icon"/><h3>Kindly RSVP</h3>
         <p>Let us know if you can make it!</p>
