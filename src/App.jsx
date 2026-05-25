@@ -105,21 +105,21 @@ const toggleMusic = () => {
     />
     */}
 
-    {/* PAGE 1 TITLE */}
+    {/* PAGE 1 TITLE 
     <h1 className="hero-title">
       Saloni & Shrenik's
       <span>Engagement Ceremony</span>
     </h1>
 
-    {/* PAGE 1 DIVIDER */}
+    {/* PAGE 1 DIVID
     <div className="divider">
       <span></span>♥<span></span>
     </div>
 
-    {/* PAGE 1 SUBTITLE */}
+    {/* PAGE 1 SUBTITLE 
     <p className="subtitle">
       {invite.subtitle}
-    </p>
+    </p>*/}
 
     {/* KEEP SCROLL BUTTON */}
     <div className="scroll-note">
