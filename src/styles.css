@@ -196,7 +196,7 @@ h2{
 .scroll-note{
 
   position:fixed;
-  bottom:5svh;
+  bottom:5%;
   left:50%;
   transform:translateX(-50%);
   color:var(--maroon);
@@ -327,7 +327,7 @@ h2{
 .details-row{
 
   position:absolute;
-  top:60vh;
+  top:75%;
   left:7%;
   display:flex;
   flex-direction:column;
