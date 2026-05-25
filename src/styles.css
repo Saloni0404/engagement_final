@@ -38,7 +38,7 @@ main{
   /* gap:clamp(14px,2.4svh,26px); */
   /* padding-block:clamp(12px,2svh,22px); */
   gap:6px;          /* very small space between pages */
-  padding-block:4px;  
+  padding-block:2px;  
   background:#fff6f3;
 }
 
@@ -196,7 +196,6 @@ h2{
   margin-left:auto;
   margin-right:auto;
 }
-
 .subtitle{
   font-family:'Cormorant Garamond',serif;
   font-size:
@@ -206,9 +205,7 @@ h2{
   letter-spacing:.02em;
   color:var(--maroon);
 }
-
 .scroll-note{
-
   position:fixed;
   /*bottom:5%;*/
   bottom:5svh;
@@ -236,7 +233,6 @@ h2{
   min-height:min(760px,90svh);
   gap:18px;
 }
-
 .invite-copy{
   order:1;
   margin-top:10vh;
@@ -296,7 +292,6 @@ h2{
   margin:14px auto 30px;
   width:100%;
 }
-
 .divider-page2 span{
  width:min(32vw,420px);
   height:2px;
@@ -308,12 +303,10 @@ h2{
       transparent
     );
 }
-
 .person-block{
   flex:1;
   max-width:150px;
 }
-
 .couple-name{
   font-family:'Cormorant Garamond',serif;
   font-size:60px;
@@ -322,7 +315,6 @@ h2{
   margin-bottom:6px;
   color:#6D071A;
 }
-
 .family-label{
   font-size:18px;
   letter-spacing:1px;
@@ -331,8 +323,6 @@ h2{
   margin-top:4px;
   margin-bottom:4px;
 }
-
-
 .family-name{
   font-size:20px;
   font-weight:600;
@@ -341,7 +331,6 @@ h2{
 }
 
 .details-row{
-
   position:absolute;
   top:75%;
   left:7%;
@@ -661,12 +650,16 @@ color:var(--gold);
 
 @media (max-width:900px){
 
-  .page{
-    width:calc(100% - 20px);
-    padding:42px 18px;
-    min-height:calc(100svh - 28px);
+  main{
+    gap:2px;
+    padding-block:0;
   }
-
+  .page{
+    width:calc(100% - 8px);
+    padding:24px 16px;
+    min-height:100svh;
+    border-radius:18px;
+  }
   .details-row{
     grid-template-columns:1fr;
     gap:8px;
@@ -791,8 +784,12 @@ color:var(--gold);
 
 }
 @media (min-width:1600px){
+  main{
+    gap:4px;
+    padding-block:2px;
+  }
   .page{
-    padding-inline:10vw;
+    min-height:100svh;
   }
   .invite-layout{
     gap:80px;
