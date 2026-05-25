@@ -327,14 +327,14 @@ h2{
 }
 .details-row{
   position:absolute;
-  top:75%;
-  left:7%;
+  bottom:8%;
+  left:50%;
+  transform:translateX(-50%);
   display:flex;
   flex-direction:column;
   align-items:flex-start;
-  gap:14px;
-  width:min(320px,42vw);
-  max-width:90%;
+  gap:10px;
+  width:min(92vw,340px);
   z-index:5;
 }
 /*.detail{
@@ -417,10 +417,7 @@ color:var(--gold);
 .closing-title,
 .final-line{
   font-family:'Great Vibes',cursive;
-  font-size:
-    clamp(2.3rem,4.8vw,4rem);
   font-weight:700;
-  line-height:1.25;
   letter-spacing:.01em;
   color:var(--maroon);
   margin:10px 0 0;
@@ -428,10 +425,13 @@ color:var(--gold);
   -webkit-font-smoothing:antialiased;
   text-shadow:
     0 .4px .4px rgba(0,0,0,.08);
+  font-size:clamp(1.6rem,4vw,2.5rem);
+  line-height:1.15;
+  padding:0 12px;
 }
 .final-giftline{
   font-family:'Cormorant Garamond';
-  font-size:clamp(2rem,4vw,4rem);
+   font-size:clamp(1.3rem,3.5vw,2.2rem);
   font-weight:600;
   line-height:1.15;
   letter-spacing:.01em;
