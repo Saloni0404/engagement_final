@@ -80,7 +80,7 @@ div{
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:4px;
+  padding:8px;
   overflow:visible;
   background-size:cover;
   background-position:center;
@@ -715,8 +715,6 @@ h2{
     width:100%;
     max-width:100%;
     overflow-x:hidden;
-  }
-  main{
     display:block;
     margin:0;
     padding:0;
@@ -732,15 +730,22 @@ h2{
   .page-frame{
     display:none;
   }
-  .hero-card,
-  .invite-layout{
-    width:100% !important;
-    max-width:100% !important;
-    margin:0 !important;
-    padding-left:16px;
-    padding-right:16px;
-    box-sizing:border-box;
-  }
+.hero-card,
+.invite-layout{
+  width:100% !important;
+  max-width:100% !important;
+  margin:0 !important;
+  padding-left:16px;
+  padding-right:16px;
+  box-sizing:border-box;
+}
+
+.page3-inner{
+  width:calc(100% - 32px) !important;
+  max-width:calc(100% - 32px) !important;
+  margin:0 auto !important;
+  box-sizing:border-box;
+}
 .stack-card{
   width:100%;
   max-width:100%;
