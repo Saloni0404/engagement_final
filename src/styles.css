@@ -75,7 +75,6 @@ div{
   z-index:5;
 }
 .page{
- 
   width:100%;
   max-width:100%;
   padding-top:4px;
@@ -102,8 +101,7 @@ div{
   background-position:center center;
   background-repeat:no-repeat;
 }
-.page3::before,
-{
+.page3::before{
   border-bottom:none;
 }
 
@@ -188,7 +186,6 @@ h2{
   width:100%;
   margin-top:1px;
 }
-
 .hero-card h1{
   max-width:900px;
   margin-left:auto;
@@ -342,15 +339,15 @@ h2{
 .detail{
   width:100%;
   padding:2px 0;
-  gap:6px;
-  min-height:30px;
+  gap:4px;
+  min-height:22px;
   display:flex;
   flex-direction:row;
   align-items:flex-start;
 }
 .detail span{
-  font-size:0.68rem;
-  line-height:1.0;
+  font-size:0.62rem;
+  line-height:0.95;
   font-weight:600;
   color:#6D071A;
   white-space:nowrap;
@@ -358,7 +355,7 @@ h2{
 .detail:first-child{
   border-left:0;
 }
-.detail svg,
+
 .detail svg,
 .section-icon{
   width:24px;
@@ -620,13 +617,12 @@ h2{
 }
   .details-row{
     grid-template-columns:1fr;
-    gap:1px;
+    gap:0;
   }
-
   .detail{
     border-left:0;
-    border-top:
-      1px solid rgba(201,154,55,.38);
+    border-top: none;
+      /*1px solid rgba(201,154,55,.38);*/
     min-height:auto;
     align-items:flex-start;
   }
@@ -670,7 +666,7 @@ h2{
     font-size:1.15rem;
   }
   .detail{
-    padding:18px 14px;
+    padding:2px 0;
   }
   .map-card{
   width:min(520px,88%);
