@@ -166,17 +166,16 @@ h2{
    PAGE 1
 ====================================================== */
 .hero-card{
-  position:relative;
-  text-align:center;
-  margin-top:0;
-  transform:none;
-  padding:36px 20px;
+  position:absolute;
+  inset:0;
   width:100%;
+  height:100%;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  min-height:auto;
+  padding:0;
+  margin:0;
 }
 
 .hero-title{
@@ -208,7 +207,7 @@ h2{
   color:var(--maroon);
 }
 .scroll-note{
-  position:fixed;
+  position:auto;
   /*bottom:5%;*/
   bottom:15dvh;
   top:auto;
@@ -418,6 +417,7 @@ color:var(--gold);
   flex-direction:column;
   align-items:center;
   gap:18px;
+  width:100%;
 }
 .closing-title,
 .final-line{
@@ -444,7 +444,8 @@ color:var(--gold);
   margin:10px 0 0;
 }
 .stack-card{
-  width:min(820px,100%);
+  width:100%;
+  max-width:100%;
   background:rgba(255,255,255,.52);
   border:
     1px solid rgba(201,154,55,.35);
