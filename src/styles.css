@@ -75,7 +75,7 @@ div{
 .page{
   width:100%;
   max-width:100%;
-  min-height:100dvh;
+  min-height:auto;
   position:relative;
   display:flex;
   align-items:center;
@@ -98,7 +98,14 @@ div{
 .page3::before{
   border-bottom:none;
 }
-
+.page1,
+.page2{
+  min-height:100dvh;
+}
+.page3{
+  padding-top:20px;
+  padding-bottom:20px;
+}
 .hero-card,
 .invite-layout,
 {
@@ -119,7 +126,6 @@ div{
   flex-direction:column;
   align-items:center;
   gap:18px;
-  padding-top:40px;
   box-sizing:border-box;
 }
 
