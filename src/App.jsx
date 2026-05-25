@@ -34,26 +34,77 @@ useEffect(() => {
         console.log('Autoplay blocked');
       }
     }
-    window.removeEventListener('click', startMusic);
-    window.removeEventListener('touchstart', startMusic);
-    window.removeEventListener('scroll', startMusic);
+    window.removeEventListener(
+      'click',
+      startMusic
+    );
+    window.removeEventListener(
+      'touchstart',
+      startMusic
+    );
+    window.removeEventListener(
+      'scroll',
+      startMusic
+    );
   };
-  window.addEventListener('click', startMusic);
-  window.addEventListener('touchstart', startMusic);
-  window.addEventListener('scroll', startMusic);
+  window.addEventListener(
+    'click',
+    startMusic
+  );
+  window.addEventListener(
+    'touchstart',
+    startMusic
+  );
+  window.addEventListener(
+    'scroll',
+    startMusic
+  );
+}, []);
+
+useEffect(() => {
+  const handleVisibilityChange = () => {
+    if (!audioRef.current) return;
+    if (document.hidden) {
+      audioRef.current.pause();
+      setPlaying(false);
+    }
+  };
+  const handleBeforeUnload = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  };
+  document.addEventListener(
+    'visibilitychange',
+    handleVisibilityChange
+  );
+  window.addEventListener(
+    'beforeunload',
+    handleBeforeUnload
+  );
+  return () => {
+    document.removeEventListener(
+      'visibilitychange',
+      handleVisibilityChange
+    );
+    window.removeEventListener(
+      'beforeunload',
+      handleBeforeUnload
+    );
+  };
 }, []);
 
 const toggleMusic = () => {
-
   if (!audioRef.current) return;
   if (playing) {
     audioRef.current.pause();
   } else {
     audioRef.current.play();
   }
-
   setPlaying(!playing);
 };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
