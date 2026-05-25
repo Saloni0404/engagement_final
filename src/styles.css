@@ -179,16 +179,17 @@ h2{
    PAGE 1
 ====================================================== */
 .hero-card{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
+  width:calc(100% - 32px);
+  max-width:calc(100% - 32px);
+  margin:0 auto;
+  min-height:100dvh;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  padding:0;
-  margin:0;
+  padding:40px 16px;
+  box-sizing:border-box;
+  position:relative;
 }
 
 .hero-title{
@@ -223,7 +224,7 @@ h2{
   /*bottom:5%;*/
   bottom:2vh;
   top:auto;
-  left:30%;
+  left:50%;
   transform:translateX(-50%);
   color:var(--maroon);
   font-family:'Cormorant Garamond',serif;
