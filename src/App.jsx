@@ -304,7 +304,7 @@ const toggleMusic = () => {
     <div className="page3-inner fade-up">
       <h2 className="closing-title">{invite.message}</h2>
       <div className="divider"><span></span>♥<span></span></div>
-      <section className="stack-card">
+      <section className="stack-card rsvp-card">
         <Mail className="section-icon"/><h3>Kindly RSVP</h3>
         <p>Let us know if you can make it!</p>
         <form onSubmit={handleSubmit} className="rsvp-form">
@@ -369,20 +369,11 @@ const toggleMusic = () => {
 </form>
     
       </section>
-      <section className="stack-card">
+      <section className="stack-card map-card">
         <MapPin className="section-icon"/>
         <h3>Getting There</h3>
-
         <p>{invite.address}</p>
         <p className="airport">{invite.airportLine}</p>
-
-        <a href={invite.mapLink} target="_blank" rel="noreferrer">
-          <img
-            src={invite.images.map}
-            className="map"
-            alt="Map preview"
-          />
-        </a>
         <a
           className="pill"
           href={invite.mapLink}
@@ -396,7 +387,6 @@ const toggleMusic = () => {
       <section className="stack-card contacts">
         <Phone className="section-icon"/>
         <h3>Contact</h3>
-
         {invite.contacts.map(c =>
           <a
             key={c.name}
