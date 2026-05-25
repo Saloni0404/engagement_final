@@ -33,12 +33,12 @@ body{
 }
 main{
   width:100%;
-  min-height:100svh;
+  min-height:100dvh;
   display:flex;
   flex-direction:column;
   align-items:center;
-  /* gap:clamp(14px,2.4svh,26px); */
-  /* padding-block:clamp(12px,2svh,22px); */
+  /* gap:clamp(14px,2.4dvh,26px); */
+  /* padding-block:clamp(12px,2dvh,22px); */
   gap:6px;          /* very small space between pages */
   padding-block:2px;  
   background:#fff6f3;
@@ -74,8 +74,8 @@ div{
   z-index:5;
 }
 .page{
- /*min-height:calc(100svh - clamp(24px,4svh,44px));*/
-  min-height:100svh;
+ /*min-height:calc(100dvh - clamp(24px,4dvh,44px));*/
+  min-height:100dvh;
   width:min(100%,560px);
   position:relative;
   display:flex;
@@ -178,7 +178,7 @@ h2{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  min-height:100svh;
+  min-height:100dvh;
 }
 
 .hero-title{
@@ -212,7 +212,7 @@ h2{
 .scroll-note{
   position:fixed;
   /*bottom:5%;*/
-  bottom:5svh;
+  bottom:5dvh;
   top:auto;
   left:50%;
   transform:translateX(-50%);
@@ -233,8 +233,8 @@ h2{
   display:flex;
   flex-direction:column;
   justify-content:space-between;
-  /*min-height:100svh;*/
-  min-height:min(760px,90svh);
+  /*min-height:100dvh;*/
+  min-height:min(760px,90dvh);
   gap:18px;
 }
 .invite-copy{
@@ -407,7 +407,7 @@ color:var(--gold);
 
 .couple{
   width:min(320px,82vw);
-  max-height:40svh;
+  max-height:40dvh;
   object-fit:contain;
   display:block;
   margin:0 auto;
@@ -516,7 +516,7 @@ color:var(--gold);
    RSVP FORM
 ====================================================== */
 .rsvp-card{
- min-height:min(760px,90svh);
+  min-height:min(760px,90dvh);
   padding-top:34px;
   padding-bottom:34px;
 }
@@ -661,7 +661,7 @@ color:var(--gold);
   .page{
     width:calc(100% - 8px);
     padding:24px 16px;
-    min-height:100svh;
+    min-height:100dvh;
     border-radius:18px;
   }
   .details-row{
@@ -783,7 +783,7 @@ color:var(--gold);
     padding-block:2px;
   }
   .page{
-    min-height:100svh;
+    min-height:100dvh;
   }
 
 }
@@ -793,9 +793,22 @@ color:var(--gold);
     padding-block:2px;
   }
   .page{
-    min-height:100svh;
+    min-height:100dvh;
   }
   .invite-layout{
     gap:80px;
   }
+}
+@supports (-webkit-touch-callout: none) {
+  html,
+  body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+  }
+  main,
+  .page{
+    min-height:100dvh !important;
+  }
+
 }
