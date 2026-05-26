@@ -294,19 +294,20 @@ const toggleMusic = () => {
 
     </div>
     <section className="page2-contacts">
+       <h3>Contact information</h3>
       <a
         href="tel:+14128050867"
         className="page2-contact"
       >
         <Phone className="mini-phone"/>
-        <span>Saloni - +14128050867</span>
+        <span>Saloni - +1 (412) 805-0867</span>
       </a>
       <a
         href="tel:+14703987738"
         className="page2-contact"
       >
         <Phone className="mini-phone"/>
-        <span>Shrenik - +14703987738</span>
+        <span>Shrenik - +1 (470) 398-7738</span>
       </a>
     </section>
 
