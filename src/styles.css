@@ -357,15 +357,18 @@ h2{
 .detail{
   width:100%;
   padding:2px 0;
-  gap:4px;
+  gap:6px;
   min-height:22px;
   display:flex;
   flex-direction:row;
-  align-items:flex-start;
+  align-items:center;
 }
 .detail span{
+
+  display:flex;
+  align-items:center;
   font-size:0.62rem;
-  line-height:0.95;
+  line-height:1.1;
   font-weight:600;
   color:#6D071A;
   white-space:nowrap;
@@ -380,9 +383,8 @@ h2{
   height:24px;
   min-width:24px;
   min-height:24px;
-  color:var(--gold);
-  opacity:1;
-  display:block;
+  margin-top:0;
+  flex-shrink:0;
 }
 .glow-link:hover{
   filter:brightness(1.15);
