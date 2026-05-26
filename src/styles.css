@@ -405,18 +405,14 @@ h2{
   display:block;
   margin:0 auto;
 }
-.contact-line,
-.page2-contacts{
-  position:absolute;
 
+/*.page2-contacts{
+  position:absolute;
   left:5%;
   bottom:6%;
-
   display:flex;
   flex-direction:column;
-
   gap:6px;
-
   z-index:5;
 }
 
@@ -435,6 +431,7 @@ h2{
   height:18px;
   color:var(--gold);
 }
+  */
 /* ======================================================
    PAGE 3
 ====================================================== */

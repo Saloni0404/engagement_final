@@ -291,27 +291,18 @@ const toggleMusic = () => {
       label="Watch Live on YouTube"
       href="https://youtube.com/live/bO4-3baMvlU?feature=share"
       />
-
-    </div>
-    <section className="page2-contacts">
-         <div className="contact-line">
-          <h3>Contact:</h3>
-         </div>
-      <a
+      <Detail
+        icon={<Phone className="mini-phone"/>}
+        label="Saloni - +1 (412) 805-0867"
         href="tel:+14128050867"
-        className="page2-contact"
-      >
-        <Phone className="mini-phone"/>
-        <span>Saloni - +1 (412) 805-0867</span>
-      </a>
-      <a
+      />
+      <Detail
+        icon={<Phone className="mini-phone"/>}
+        label="Shrenik - +1 (470) 398-7738" 
         href="tel:+14703987738"
-        className="page2-contact"
       >
-        <Phone className="mini-phone"/>
-        <span>Shrenik - +1 (470) 398-7738</span>
-      </a>
-    </section>
+    </div>
+  
 
     {/* =========================================
        COMMENTED COUPLE IMAGE
