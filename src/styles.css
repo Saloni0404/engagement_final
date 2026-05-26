@@ -1042,18 +1042,21 @@ main{
  background: rgba(255, 192, 203, 0.75);
  border-radius: 0 70% 70% 70%;
  transform: rotate(45deg);
- animation: petals-fall linear infinite;
+ animation: petals-fall 10s linear infinite;
  filter: blur(0.3px);
 }
-
 .petal:nth-child(2n) {
  background: maroon;
  width: 10px;
  height: 10px;
 }
-
 .petal:nth-child(3n) {
  background: rgba(255, 182, 193, 0.8);
+ width: 16px;
+ height: 16px;
+}
+.petal:nth-child(4n) {
+ background: white;
  width: 16px;
  height: 16px;
 }
@@ -1067,9 +1070,11 @@ main{
  10% {
    opacity: 1;
  }
-
+50% {
+   transform: translate3d(-15vw, 55vh, 0) rotate(180deg);
+ }
  100% {
-   transform: translate3d(-35vw, 120vh, 0) rotate(360deg);
+   transform: translate3d(-70vw, 120vh, 0) rotate(360deg);
    opacity: 0;
  }
 }
