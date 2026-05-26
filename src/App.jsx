@@ -23,24 +23,21 @@ function Page({ n, children }) {
   );
 }
 function FallingPetals() {
-  const petals = Array.from({ length: 18 });
-  return (
-    <div className="petal-overlay" aria-hidden="true">
-      {petals.map((_, index) => (
-        <span
-          key={index}
-          className="petal"
-          style={{
-            "--i": index,
-            "--delay": `${index * 0.9}s`,
-            "--duration": `${9 + (index % 6)}s`,
-            "--start-x": `${(index * 17) % 100}vw`,
-            "--size": `${10 + (index % 5) * 3}px`,
-          }}
-        />
-      ))}
-    </div>
-  );
+ return (
+   <div className="petal-overlay">
+     {[...Array(20)].map((_, i) => (
+       <div
+         key={i}
+         className="petal"
+         style={{
+           left: `${Math.random() * 100}%`,
+           animationDelay: `${Math.random() * 10}s`,
+           animationDuration: `${10 + Math.random() * 8}s`,
+         }}
+       />
+     ))}
+   </div>
+ );
 }
 
 function App(){
@@ -175,8 +172,12 @@ const toggleMusic = () => {
       alert('Something went wrong. Please try again.');
     }
   };
+return (
+  <>
+    <FallingPetals />
+    <main>
 
- return <main>
+
 <Page n={1}>
   <div className="hero-card fade-up">
   
@@ -469,8 +470,13 @@ const toggleMusic = () => {
     {playing ? '❚❚ Music' : '▶ Music'}
    </button>
 
-</main> 
+</main>
+  </>
+);
 }
 createRoot(document.getElementById('root')).render(<App />);
+
+
+
 
 

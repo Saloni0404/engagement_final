@@ -375,7 +375,7 @@ h2{
   line-height:1;
   color:#6D071A;
   margin-top:1px;
-  transform:translateY(3px);
+  transform:translateY(5px);
   }
 .detail:first-child{
   border-left:0;
@@ -1022,52 +1022,3 @@ main{
     min-height:auto !important;
   }
 }
-
-.petal-overlay {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 999;
-}
-
-.petal {
-  position: absolute;
-  top: -40px;
-  left: var(--start-x);
-  width: var(--size);
-  height: calc(var(--size) * 1.35);
-  background: radial-gradient(circle at 30% 30%, #fff7f8 0%, #f7b7c7 45%, #d86f8f 100%);
-  border-radius: 70% 30% 70% 30%;
-  opacity: 0.55;
-  filter: blur(0.2px);
-  animation: petalFall var(--duration) linear infinite;
-  animation-delay: var(--delay);
-  transform: rotate(25deg);
-}
-
-.petal:nth-child(3n) {
-  background: radial-gradient(circle at 30% 30%, #fffaf0 0%, #f3d58b 45%, #c99a35 100%);
-  opacity: 0.38;
-}
-
-.petal:nth-child(4n) {
-  background: radial-gradient(circle at 30% 30%, #fff 0%, #ffd6df 45%, #e99aad 100%);
-  opacity: 0.45;
-}
-
-@keyframes petalFall {
-  0% {
-    transform: translate3d(0, -10vh, 0) rotate(0deg);
-  }
-
-  50% {
-    transform: translate3d(-18vw, 55vh, 0) rotate(180deg);
-  }
-
-  100% {
-    transform: translate3d(-36vw, 115vh, 0) rotate(360deg);
-  }
-}
-
-
