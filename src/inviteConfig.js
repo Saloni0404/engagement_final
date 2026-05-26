@@ -4,7 +4,7 @@ export const invite = {
   /*subtitle: 'A beautiful beginning of our forever',*/
   /*intro: 'We would like to invite you to the engagement ceremony of',*/
   dateLabel: 'Saturday, June 13, 2026',
-  timeLabel: '6:30 PM PST (7:00am IST) onwards',
+  timeLabel: '6:30 pm PST onwards',
   locationShort: 'Shubham Halls, Sunnyvale, CA',
   address: '1208 Apollo Way Suite 500, Sunnyvale, CA 94085',
   airportLine: '6.5 miles from San José Mineta Airport (SJC) and 31 miles from San Francisco International Airport (SFO)',
