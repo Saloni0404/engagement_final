@@ -10,7 +10,6 @@ function Detail({icon, label, href}){
   </a>
 }
 function Page({ n, children }) {
-
   return (
     <section
       className={`page page${n}`}
@@ -19,11 +18,28 @@ function Page({ n, children }) {
           `url(${invite.images.backgrounds[n - 1]})`
       }}
     >
-      <div className="page-frame"></div>
       {children}
     </section>
   );
 }
+function FallingPetals() {
+ return (
+   <div className="petal-overlay">
+     {[...Array(20)].map((_, i) => (
+       <div
+         key={i}
+         className="petal"
+         style={{
+           left: `${Math.random() * 100}%`,
+           animationDelay: `${Math.random() * 10}s`,
+           animationDuration: `${10 + Math.random() * 8}s`,
+         }}
+       />
+     ))}
+   </div>
+ );
+}
+
 function App(){
   const [form, setForm] = useState({
     name: '',
@@ -37,83 +53,77 @@ function App(){
   });
   const audioRef = useRef(null);
 
-  useEffect(() => {
-    const startMusic = async () => {
-      if (!audioRef.current) return;
+const [playing, setPlaying] = useState(false);
+useEffect(() => {
+  const startMusic = async () => {
+    if (audioRef.current) {
       try {
-        audioRef.current.muted = false;
         await audioRef.current.play();
         setPlaying(true);
-        {/*window.removeEventListener(
-          "scroll",
-          startMusic
-        );*/}
-        window.removeEventListener(
-          "touchstart",
-          startMusic
-        );
-        window.removeEventListener(
-          "touchmove",
-          startMusic
-        );
       } catch (err) {
-        console.log("Autoplay blocked");
+        console.log('Autoplay blocked');
       }
-    };
-    {/*window.addEventListener(
-      "scroll",
-      startMusic,
-      { passive: true }
-    );*/}
-    window.addEventListener(
-      "touchstart",
-      startMusic,
-      { passive: true }
+    }
+    window.removeEventListener(
+      'click',
+      startMusic
     );
-    window.addEventListener(
-      "touchmove",
-      startMusic,
-      { passive: true }
+    window.removeEventListener(
+      'touchstart',
+      startMusic
     );
-    return () => {
-     {/* window.removeEventListener(
-        "scroll",
-        startMusic
-      );*/}
-      window.removeEventListener(
-        "touchstart",
-        startMusic
-      );
-      window.removeEventListener(
-        "touchmove",
-        startMusic
-      );
-    };
-  }, []);
-  
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      if (!audioRef.current) return;
-      if (document.hidden) {
-        audioRef.current.pause();
-        setPlaying(false);
-      } else {
-        audioRef.current.play()
-          .then(() => setPlaying(true))
-          .catch(() => {});
-      }
-    };
-    document.addEventListener(
+    window.removeEventListener(
+      'scroll',
+      startMusic
+    );
+  };
+  window.addEventListener(
+    'click',
+    startMusic
+  );
+  window.addEventListener(
+    'touchstart',
+    startMusic
+  );
+  window.addEventListener(
+    'scroll',
+    startMusic
+  );
+}, []);
+
+useEffect(() => {
+  const handleVisibilityChange = () => {
+    if (!audioRef.current) return;
+    if (document.hidden) {
+      audioRef.current.pause();
+      setPlaying(false);
+    }
+  };
+  const handleBeforeUnload = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  };
+  document.addEventListener(
+    'visibilitychange',
+    handleVisibilityChange
+  );
+  window.addEventListener(
+    'beforeunload',
+    handleBeforeUnload
+  );
+  return () => {
+    document.removeEventListener(
       'visibilitychange',
       handleVisibilityChange
     );
-    return () => {
-      document.removeEventListener(
-        'visibilitychange',
-        handleVisibilityChange
-      );
-    };
-  }, []);
+    window.removeEventListener(
+      'beforeunload',
+      handleBeforeUnload
+    );
+  };
+}, []);
 
 const toggleMusic = () => {
   if (!audioRef.current) return;
@@ -162,22 +172,13 @@ const toggleMusic = () => {
       alert('Something went wrong. Please try again.');
     }
   };
+return (
+  <>
+    <FallingPetals />
+    <main>
 
- return <main>
+
 <Page n={1}>
-  {!opened && (
- <div
-   className="invite-overlay"
-   onClick={openInvitation}
- >
-   <div className="overlay-content">
-     <h2>
-       Tap to Open Invitation
-     </h2>
-   </div>
- </div>
-)}
-
   <div className="hero-card fade-up">
   
     {/*
@@ -311,8 +312,18 @@ const toggleMusic = () => {
       label="Watch Live on YouTube"
       href="https://youtube.com/live/bO4-3baMvlU?feature=share"
       />
-
+      <Detail
+        icon={<Phone className="mini-phone"/>}
+        label="Saloni: +1 (412) 805-0867"
+        href="tel:+14128050867"
+      />
+      <Detail
+        icon={<Phone className="mini-phone"/>}
+        label="Shrenik: +1 (470) 398-7738"
+        href="tel:+14703987738"
+      />
     </div>
+  
 
     {/* =========================================
        COMMENTED COUPLE IMAGE
@@ -336,7 +347,6 @@ const toggleMusic = () => {
   <Page n={3}>
     <div className="page3-inner fade-up">
       <h2 className="closing-title">{invite.message}</h2>
-      <div className="divider"><span></span>♥<span></span></div>
       <section className="stack-card rsvp-card">
         <Mail className="section-icon"/><h3>Kindly RSVP</h3>
         <p>Let us know if you can make it!</p>
@@ -401,7 +411,9 @@ const toggleMusic = () => {
         </button>      
 </form>
     
+      
       </section>
+     {/*
       <section className="stack-card map-card">
         <MapPin className="section-icon"/>
         <h3>Getting There</h3>
@@ -416,7 +428,8 @@ const toggleMusic = () => {
           View on Map ↗
         </a>
       </section>
-
+      */}
+     {/*
       <section className="stack-card contacts">
         <Phone className="section-icon"/>
         <h3>Contact</h3>
@@ -431,6 +444,7 @@ const toggleMusic = () => {
           </a>
         )}
       </section>
+      */}
       <p className="final-giftline">{invite.giftLine}</p>
       <p className="final-line">{invite.closing}</p>
       
@@ -444,7 +458,7 @@ const toggleMusic = () => {
       playsInline
     >
     <source
-    src="/music/romantic-music.mp3"
+    src="/music/nazm-nazm.mp3"
     type="audio/mpeg"
     />
     </audio>
@@ -453,9 +467,16 @@ const toggleMusic = () => {
     className="music-btn"
     onClick={toggleMusic}
   >
-    {playing ? '❚❚ Music' : '▶ Music'}
+    {playing ? '❚❚ ' : '▶'}
    </button>
 
-</main> 
+</main>
+  </>
+);
 }
 createRoot(document.getElementById('root')).render(<App />);
+
+
+
+
+

@@ -4,7 +4,11 @@ export const invite = {
   /*subtitle: 'A beautiful beginning of our forever',*/
   /*intro: 'We would like to invite you to the engagement ceremony of',*/
   dateLabel: 'Saturday, June 13, 2026',
+<<<<<<< HEAD
   timeLabel: '6:30pm PST (7:00am IST) onwards',
+=======
+  timeLabel: '6:30 pm PST onwards',
+>>>>>>> 4008d94a3f417945de3a5d0481cef4941719237a
   locationShort: 'Shubham Halls, Sunnyvale, CA',
   address: '1208 Apollo Way Suite 500, Sunnyvale, CA 94085',
   airportLine: '6.5 miles from San José Mineta Airport (SJC) and 31 miles from San Francisco International Airport (SFO)',
@@ -21,6 +25,10 @@ export const invite = {
   images: {
     logo: '/logo.png',
     couple: '/couple.png',
+<<<<<<< HEAD
     backgrounds: ['/page1-new.png','/page2-new.png','/page3-new.png']
+=======
+    backgrounds: ['/page1-new2.png','/page2-new.png','/page1-new.png']
+>>>>>>> 4008d94a3f417945de3a5d0481cef4941719237a
   }
 };
