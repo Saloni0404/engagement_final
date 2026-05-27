@@ -37,77 +37,83 @@ function App(){
   });
   const audioRef = useRef(null);
 
-const [playing, setPlaying] = useState(false);
-useEffect(() => {
-  const startMusic = async () => {
-    if (audioRef.current) {
+  useEffect(() => {
+    const startMusic = async () => {
+      if (!audioRef.current) return;
       try {
+        audioRef.current.muted = false;
         await audioRef.current.play();
         setPlaying(true);
+        {/*window.removeEventListener(
+          "scroll",
+          startMusic
+        );*/}
+        window.removeEventListener(
+          "touchstart",
+          startMusic
+        );
+        window.removeEventListener(
+          "touchmove",
+          startMusic
+        );
       } catch (err) {
-        console.log('Autoplay blocked');
+        console.log("Autoplay blocked");
       }
-    }
-    window.removeEventListener(
-      'click',
-      startMusic
+    };
+    {/*window.addEventListener(
+      "scroll",
+      startMusic,
+      { passive: true }
+    );*/}
+    window.addEventListener(
+      "touchstart",
+      startMusic,
+      { passive: true }
     );
-    window.removeEventListener(
-      'touchstart',
-      startMusic
+    window.addEventListener(
+      "touchmove",
+      startMusic,
+      { passive: true }
     );
-    window.removeEventListener(
-      'scroll',
-      startMusic
-    );
-  };
-  window.addEventListener(
-    'click',
-    startMusic
-  );
-  window.addEventListener(
-    'touchstart',
-    startMusic
-  );
-  window.addEventListener(
-    'scroll',
-    startMusic
-  );
-}, []);
-
-useEffect(() => {
-  const handleVisibilityChange = () => {
-    if (!audioRef.current) return;
-    if (document.hidden) {
-      audioRef.current.pause();
-      setPlaying(false);
-    }
-  };
-  const handleBeforeUnload = () => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    }
-  };
-  document.addEventListener(
-    'visibilitychange',
-    handleVisibilityChange
-  );
-  window.addEventListener(
-    'beforeunload',
-    handleBeforeUnload
-  );
-  return () => {
-    document.removeEventListener(
+    return () => {
+     {/* window.removeEventListener(
+        "scroll",
+        startMusic
+      );*/}
+      window.removeEventListener(
+        "touchstart",
+        startMusic
+      );
+      window.removeEventListener(
+        "touchmove",
+        startMusic
+      );
+    };
+  }, []);
+  
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (!audioRef.current) return;
+      if (document.hidden) {
+        audioRef.current.pause();
+        setPlaying(false);
+      } else {
+        audioRef.current.play()
+          .then(() => setPlaying(true))
+          .catch(() => {});
+      }
+    };
+    document.addEventListener(
       'visibilitychange',
       handleVisibilityChange
     );
-    window.removeEventListener(
-      'beforeunload',
-      handleBeforeUnload
-    );
-  };
-}, []);
+    return () => {
+      document.removeEventListener(
+        'visibilitychange',
+        handleVisibilityChange
+      );
+    };
+  }, []);
 
 const toggleMusic = () => {
   if (!audioRef.current) return;
@@ -159,6 +165,19 @@ const toggleMusic = () => {
 
  return <main>
 <Page n={1}>
+  {!opened && (
+ <div
+   className="invite-overlay"
+   onClick={openInvitation}
+ >
+   <div className="overlay-content">
+     <h2>
+       Tap to Open Invitation
+     </h2>
+   </div>
+ </div>
+)}
+
   <div className="hero-card fade-up">
   
     {/*
