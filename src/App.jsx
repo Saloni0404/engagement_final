@@ -54,6 +54,18 @@ function App(){
   const audioRef = useRef(null);
 
 const [playing, setPlaying] = useState(false);
+const [opened, setOpened] = useState(false);
+const openInvitation = async () => {
+  if (opened) return;
+  if (!audioRef.current) return;
+  try {
+    await audioRef.current.play();
+    setPlaying(true);
+    setOpened(true);
+  } catch(err) {
+    console.log(err);
+  }
+};
 useEffect(() => {
   const startMusic = async () => {
     if (audioRef.current) {
